@@ -1,0 +1,200 @@
+a {
+  color: #6471a2;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.homepage-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 60%;
+  margin-left: 20%;
+  height: 50px;
+  border-bottom: 2px solid #ffdeab;
+  border-radius: 0 0 25px 25px;
+  -webkit-box-shadow: 0px 3px 5px 3px #3D3F4E;
+  box-shadow: 0px 3px 5px 3px #3D3F4E;
+  background-image: url("./romboo.svg");
+  background-size: 15px;
+  background-color: white;
+}
+.nav-bar .links-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.nav-bar .links-container .link-to {
+  position: relative;
+  height: 100%;
+  width: 25%;
+  border-right: 1px solid #8e8ead;
+  background: white;
+  background: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0) 100%);
+}
+.nav-bar .links-container .link-to .link-button {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .links-container .link-to .link-button a {
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+.nav-bar .links-container .link-to .link-button:hover {
+  background: #fbcaedcc;
+}
+.nav-bar .links-container .link-to:first-child .link-button {
+  border-bottom-left-radius: 25px;
+}
+.nav-bar .links-container .link-to:last-child {
+  border-bottom-right-radius: 25px;
+  border-right: none;
+}
+
+.section-container {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-image: url("./romboo.svg");
+  background-size: 15px;
+  background-color: white;
+}
+.section-container .section {
+  width: 100%;
+  background: white;
+  background: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid #8e8ead;
+}
+
+.content {
+  display: flex;
+}
+.content .main-content {
+  width: 70%;
+  height: auto;
+}
+.content .main-content .main-container {
+  color: #1e5483;
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.808);
+  border-radius: 25px;
+  border: 2px solid #ffdeab;
+}
+.content .main-content .main-container .main-title {
+  padding: 20px 0;
+}
+.content .main-content .main-container .main-content-img {
+  max-width: 80%;
+}
+.content .main-content .main-container p {
+  padding: 15px 20px;
+  text-align: left;
+  width: 100%;
+}
+.content .side-content {
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.content .side-content .side-container {
+  width: 90%;
+  max-width: 500px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+.content .side-content .side-container-mobile {
+  margin-top: 20px;
+}
+
+.current-event-frame {
+  width: 100%;
+  height: auto;
+  padding: 10px 10px;
+  border-radius: 20px;
+  text-align: left;
+  position: relative;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.808);
+}
+.current-event-frame .current-event-title {
+  z-index: 2;
+  display: inline;
+  background-color: white;
+  color: #6471a2;
+  font-weight: 700;
+  padding: 10px 10px;
+  border-radius: 20px;
+  border: 2px solid #ffdeab;
+  position: absolute;
+  top: -10px;
+}
+.current-event-frame img {
+  width: 100%;
+  border-radius: 20px;
+  margin: 5px 0;
+}
+
+.current-event-frame:first-child {
+  margin-top: 0;
+}
+
+.social {
+  display: flex;
+  justify-content: space-evenly;
+  background: none;
+}
+.social li {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #ffdeab;
+  padding: 20px 20px;
+  color: #1e5483;
+  cursor: pointer;
+}
+.social li:hover {
+  background: #5f96f3;
+  color: white;
+}
+
+.nav-mobile {
+  width: 100%;
+  margin-left: 0;
+}
+
+.content-mobile {
+  flex-direction: column;
+  align-items: center;
+}
+.content-mobile .main-content {
+  width: 90%;
+}
+.content-mobile .side-content {
+  width: 90%;
+}
+
+/*# sourceMappingURL=homepage.css.map */
