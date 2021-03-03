@@ -43,9 +43,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 50;
+  position: relative;
 }
 .nav-bar .links-container .link-to .link-button a {
-  font-size: 20px;
+  font-size: 16px;
   width: 100%;
   height: 100%;
   line-height: 50px;
@@ -63,19 +65,30 @@ a {
   border-right: none;
 }
 
+.link-button:hover ~ .section-container {
+  transform: translateY(0);
+}
+
 .section-container {
+  z-index: 2;
   position: absolute;
   top: 100%;
   width: 100%;
   background-image: url("./romboo.svg");
   background-size: 15px;
   background-color: white;
+  transform: translateY(-150%);
+  transition: 0.4s;
 }
 .section-container .section {
   width: 100%;
   background: white;
   background: linear-gradient(180deg, white 40%, rgba(255, 255, 255, 0) 100%);
   border: 1px solid #8e8ead;
+}
+
+.section-container:hover {
+  transform: translateY(0);
 }
 
 .content {
@@ -97,15 +110,51 @@ a {
   border: 2px solid #ffdeab;
 }
 .content .main-content .main-container .main-title {
-  padding: 20px 0;
+  font-size: 30px;
+  padding: 10px 0;
+}
+.content .main-content .main-container .main-subtitle {
+  font-size: 25px;
 }
 .content .main-content .main-container .main-content-img {
   max-width: 80%;
 }
 .content .main-content .main-container p {
-  padding: 15px 20px;
+  font-size: 18px;
+  padding: 5px 20px;
   text-align: left;
   width: 100%;
+}
+.content .main-content .divide-two {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.content .main-content .divide-two .one-side {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.content .main-content .divide-two img {
+  width: 90%;
+  border-radius: 20px;
+  margin: 5px 0;
+}
+.content .main-content .divide-two p {
+  text-align: center;
+  padding: 0;
+}
+.content .main-content .divide-two button {
+  border-radius: 10px;
+  padding: 5px;
+  margin: px 0;
+  background-color: white;
+  color: #1e5483;
+  border: 2px #ffdeab solid;
+}
+.content .main-content .divide-mobile {
+  flex-direction: column;
 }
 .content .side-content {
   width: 30%;
@@ -181,6 +230,10 @@ a {
   color: white;
 }
 
+.margin-top {
+  margin-top: 20px;
+}
+
 .nav-mobile {
   width: 100%;
   margin-left: 0;
@@ -191,7 +244,7 @@ a {
   align-items: center;
 }
 .content-mobile .main-content {
-  width: 90%;
+  width: 95%;
 }
 .content-mobile .side-content {
   width: 90%;
