@@ -58,6 +58,9 @@ $negativeStat:#e24352;
         .source{
             flex: 1;
         }
+        .month{
+            width: 20%;
+        }
     }
     .row-desktop{
         min-width: 800px;
@@ -332,8 +335,10 @@ $negativeStat:#e24352;
     z-index: 550;
     color: $black;
     margin-top: 40px;
-    width: 100vw;
-    height: 100%;
+    width: 20%;
+    max-width: 300px;
+    min-width: 200px;
+    height: auto;
     background-color: white;
     position: fixed;
     display: flex;
@@ -341,9 +346,38 @@ $negativeStat:#e24352;
     align-items: center;
     transform: translateX(-100vw);
     transition: 0.5s;
+    border-radius: 0 25px 25px 0;
+    border: 2px solid $borderGold;
     .credits-section{
         width: 100%;
-        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px 20px 0;
+        border-radius: 0 25px 25px 0;
+        
+        .btn{
+            width: 90%;
+            background: rgb(95,150,243);
+            background: linear-gradient(180deg, rgba(95,150,243,1) 0%, rgba(199,218,251,1) 5%, rgba(95,150,243,1) 25%, rgba(95,150,243,1) 100%);
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid $borderGold;
+            border-radius: 10px;
+            font-weight: 700;
+            -webkit-box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.78); 
+            box-shadow: 0px 10px 15px -4px rgba(0,0,0,0.78);
+            cursor: pointer;
+            transition: 0.5s;
+            text-align: center;
+        }
+    
+        .btn:hover{
+            color: $black;
+            background: white;
+            background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 5%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
+        }
     }
     h2{
         color: white;
@@ -369,16 +403,6 @@ $negativeStat:#e24352;
         font-size: 14px;
     }
 
-}
-@media(max-width:400px){
-    .side-bar p{
-        font-size: 13px;
-    }
-}
-@media(max-width:360px){
-    .side-bar p{
-        font-size: 12px;
-    }
 }
 .sidebar-show{
     transform: translateX(0);
@@ -567,6 +591,9 @@ $negativeStat:#e24352;
         width: 80%;
     }
 }
+.filter-mobile{
+    top: 0;
+}
 .enter{
     transform: translateX(0);
 }
@@ -589,4 +616,112 @@ input[type=checkbox]{
 }
 .negative{
     color: $blue;
+}
+
+
+/*Schedule styling*/
+
+.events-list{
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    display: flex;
+    background-color: rgba(156, 156, 156, 0.616);
+    .event-column{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        border-right: 5px solid $borderGold;
+        .schedule-banner{
+            width: 100%;
+            position: relative;
+            margin-top: 25px;
+            img{
+                width: 90%;
+            }
+            p{
+                color: $darkBlue;
+            }
+        }
+    }
+}
+.table-two-sides{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+.table-container .schedule-tab{
+    width: 80px;
+    height: auto;
+    min-height: 100vh;
+    border-bottom: none;
+    border-right: 2px solid $borderGold;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    .month{
+        height: 150px;
+        min-height: 150px;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid $borderGold;
+    }
+}
+.event-list-mobile{
+    margin:0;
+    flex-direction: column;
+    overflow: auto;
+    .event-column{
+        flex-direction: row;
+        height: 150px;
+        min-height: 150px;
+        position: relative;
+        a{
+            min-width: 260px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-left: 20px;
+            height: 100%;
+            justify-content: center;
+            img{
+                height: 90%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+.name-button{
+    position: absolute;
+    background-color: white;
+    border: 1px solid $borderGold;
+    padding: 0 5px;
+    border-radius: 10px;
+    top: 0;
+}
+.date-button{
+    position: absolute;
+    background-color: white;
+    border: 1px solid $borderGold;
+    padding: 0 5px;
+    border-radius: 10px;
+    bottom: 0;
+    right: 0;
+}
+.filter-icon{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    i{
+        font-size: 20px;
+    }
 }

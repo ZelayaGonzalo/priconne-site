@@ -7,34 +7,35 @@ function NavBar(){
         <nav className={isMobile ? "nav-bar nav-mobile" :"nav-bar" }>
                 <ul className="links-container">
                     <li className="link-to link-to-desktop">
-                        <div className="link-button"><Link to="/Home">Home</Link></div>
+                        <div className="link-button"><Link to="/">Home</Link></div>
                     </li>
                     <li className="link-to link-to-desktop">
                         <div className="link-button"><a>Events</a></div>
                         <ul className="section-container">
-                            <li className="section"><div className="link-button"><Link to={`${url}/events-info`}>Info</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/past-events`}>Past</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/upcoming-events`}>Upcoming</Link></div></li>
-                            <li className="section"><div className="link-button"><Link>Schedule</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to="/timeline" target="_blank">Timeline  <i className="fas fa-external-link-alt"></i></Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/events-disclaimer`}>Disclaimer</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/events-info`}>Info</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/past-events`}>Past</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/upcoming-events`}>Upcoming</Link></div></li>
                         </ul>
                     </li>
                     <li className="link-to link-to-desktop">
                         <div className="link-button"><a>Tierlist</a></div>
                         <ul className="section-container">
-                            <li className="section"><div className="link-button"><Link to="/table" target="_blank">Tierlist</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/tierlist-disclaimer`}>Disclaimer</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/tierlist-tutorial`}>Tutorial</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/tierlist-changelog`}>Changelog</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to="/tierlist" target="_blank">Tierlist  <i className="fas fa-external-link-alt"></i></Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`${url}tierlist-disclaimer`}>Disclaimer</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`${url}tierlist-tutorial`}>Tutorial</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`${url}tierlist-changelog`}>Changelog</Link></div></li>
                         </ul>
                     </li>
                     <li className="link-to link-to-desktop">
                         <div className="link-button"><a>More</a></div>
                         <ul className="section-container">
-                            <li className="section"><div className="link-button"><a>Game Updates</a></div></li>
-                            <li className="section"><div className="link-button"><a>Guides</a></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/tierlist-disclaimer`}>Useful Links</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/tierlist-tutorial`}>Official Links</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`${url}/tierlist-changelog`}>About</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/game-updates`}>Game Updates</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/guides`}>Guides</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/useful-links`}>Useful Links</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/official-links`}>Official Links</Link></div></li>
+                            <li className="section"><div className="link-button"><Link to={`/about`}>About</Link></div></li>
                         </ul>
                     </li>
                 </ul>

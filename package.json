@@ -1,5 +1,5 @@
 {
-  "homepage": "http://ZelayaGonzalo.github.io/priconne-tierlist",
+  "homepage": "http://ZelayaGonzalo.github.io/priconne-site",
   "name": "priconne-tierlist",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.3",
+    "framer-motion": "^3.10.0",
     "overlayscrollbars": "^1.13.1",
     "overlayscrollbars-react": "^0.2.2",
     "react": "^17.0.1",
