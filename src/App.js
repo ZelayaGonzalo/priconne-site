@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router basename={`/priconne-site}`}>
+      <Router basename={`/priconne-site`}>
         <ScrollToTop/>
         <Switch>
           <Route path="/tierlist">
