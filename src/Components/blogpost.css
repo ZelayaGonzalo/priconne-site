@@ -1,6 +1,8 @@
 .main-container img{
     max-width: 100%;
+    height: auto;
 }
 .main-container p img{
     max-width: 100%;
+    height: auto;
 }
