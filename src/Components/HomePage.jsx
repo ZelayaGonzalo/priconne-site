@@ -1,10 +1,12 @@
 import './homepage.css';
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+import BlogPost from './BlogPost'
 import { isMobile, MobileView, BrowserView } from 'react-device-detect';
 import {
   Switch,
   Route,
+  Link,
   useRouteMatch,
   useLocation,
 } from 'react-router-dom';
@@ -13,13 +15,28 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 function HomePage() {
   const [showEvent, setShowEvent] = useState(true);
+  const [articles,setArticles] = useState([])
   let { path,url} = useRouteMatch();
   const location =useLocation()
+  const apiURL="https://blogapinodejs.herokuapp.com/api/all"
+
   function changeShow() {
     setShowEvent(!showEvent);
   }
+  function getCurrentBanners(){
+    return eventData.filter(data => (data.type ==='focus' && data.start.getTime() <= new Date().getTime() && data.end.getTime() >= new Date().getTime()))
+    .map(data => <img key={data.name} src={data.banner} alt={data.name}></img>)
+  }
 
   useEffect(() => {
+    async function fetchData(){
+      const response = await fetch(apiURL)
+      const data = await response.json()
+      await setArticles(data)
+      console.log(data)
+    }
+    fetchData()
+
     document.body.style.background =
       "url('https://i.ibb.co/5KkyhgD/forestBG.jpg') no-repeat center";
     document.body.style.backgroundSize = 'cover';
@@ -35,7 +52,7 @@ function HomePage() {
         <AnimatePresence exitBeforeEnter initial={false}>
           <Switch location={location} key={location.pathname}>
             <Route exact path={path}>
-              {HomePageSite()}
+              {HomePageSite(articles)}
             </Route>
             <Route path={`${path}events-disclaimer`}>{eventDisclaimer()}</Route>
             <Route path={`${path}events-info`}>{eventInfo()}</Route>
@@ -53,6 +70,7 @@ function HomePage() {
             <Route path={`/useful-links`}>{usefulLinks()}</Route>
             <Route path={`/official-links`}>{officialLinks()}</Route>
             <Route path={`/about`}>{about()}</Route>
+            {articles.map(article =><Route key={article.url} path={`/${article.url}`}><BlogPost body={article.body}/> </Route>)}
           </Switch>
         </AnimatePresence>
         <div className="side-content">
@@ -65,7 +83,7 @@ function HomePage() {
           >
             <div className="current-event-frame">
               <p className="current-event-title">Current Banner</p>
-              <img src="https://i.ibb.co/CJvswrV/arisa.jpg" alt="banner" />
+              {getCurrentBanners()}
             </div>
             <div className="current-event-frame">
               <p className="current-event-title">Current Events</p>
@@ -96,7 +114,7 @@ function HomePage() {
   );
 }
 
-function HomePageSite(){
+function HomePageSite(articles){
     return(
         <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
         <div className="main-container">
@@ -105,6 +123,7 @@ function HomePageSite(){
             Note: Last announcement broke all predictions, please read the events disclaimer.
           </h3>
           <p>I don't know what to put here yet lol. All tabs should be working. tabs in the more section don't have content yet</p>
+          {articles.map(article => <Link to={`/${article.url}`} className="homepage-article"><div className="article-container"><p>{article.title}</p> {article.author ? <p>{article.author}</p>: null} <p>{new Date(article.date).toLocaleDateString()}</p> </div></Link>)}
         </div>
       </motion.div>
     )

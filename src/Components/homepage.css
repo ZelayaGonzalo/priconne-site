@@ -125,7 +125,7 @@ a {
 }
 .content .main-content .main-container p {
   font-size: 18px;
-  padding: 5px 20px;
+  padding: 0 20px;
   text-align: left;
   width: 100%;
 }
@@ -253,6 +253,16 @@ a {
 }
 .content-mobile .side-content {
   width: 90%;
+}
+
+.homepage-article {
+  background-color: white;
+  margin: 5px 0;
+  width: 90%;
+  height: auto;
+  padding: 5px 0;
+  border-radius: 25px;
+  border: 2px solid #ffdeab;
 }
 
 /*# sourceMappingURL=homepage.css.map */
