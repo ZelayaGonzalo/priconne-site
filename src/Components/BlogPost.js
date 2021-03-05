@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import './blogpost.css'
 function BlogPost(props){
     const parser = new DOMParser()
     const doc = parser.parseFromString(props.body,"text/html");

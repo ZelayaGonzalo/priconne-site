@@ -123,7 +123,18 @@ function HomePageSite(articles){
             Note: Last announcement broke all predictions, please read the events disclaimer.
           </h3>
           <p>I don't know what to put here yet lol. All tabs should be working. tabs in the more section don't have content yet</p>
-          {articles.map(article => <Link to={`/${article.url}`} className="homepage-article"><div className="article-container"><p>{article.title}</p> {article.author ? <p>{article.author}</p>: null} <p>{new Date(article.date).toLocaleDateString()}</p> </div></Link>)}
+          {articles.sort(function (a, b) {
+                  const dateA=new Date(a.date)
+                  const dateB = new Date(b.date)
+                  if  (dateA.getTime() < dateB.getTime()) {
+                    return 1;
+                  }
+                  if (dateA.getTime() > dateB.getTime()) {
+                    return -1;
+                  }
+                  return 0;
+                })
+          .map(article => <Link to={`/${article.url}`} className="homepage-article"><div className="article-container"><h2 className="main-subtitle">{article.title}</h2> {article.author ? <p style={{color:'gray'}}>{article.author}</p>: null} <p style={{fontSize:14}}>{new Date(article.date).toLocaleDateString()}</p> </div></Link>)}
         </div>
       </motion.div>
     )
