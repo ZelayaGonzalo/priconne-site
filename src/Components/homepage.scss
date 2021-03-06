@@ -271,9 +271,25 @@ a{
 .homepage-article{
     background-color: white;
     margin: 5px 0;
-    width: 90%;
+    width: 95%;
     height: auto;
     padding: 5px 0;
     border-radius: 25px;
     border: 2px solid $borderGold;
+    width: 100%;
+    .header-top{
+        padding: 0 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        .header-date{
+            font-size: 15px;
+            width: auto;
+        }
+    }
+    .header-author{
+        font-size: 14px;
+        color: $black;
+    }
 }

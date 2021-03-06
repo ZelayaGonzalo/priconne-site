@@ -68,9 +68,8 @@ function HomePage() {
             <Route path={`/game-updates`}>{gameUpdates()}</Route>
             <Route path={`/guides`}>{guides()}</Route>
             <Route path={`/useful-links`}>{usefulLinks()}</Route>
-            <Route path={`/official-links`}>{officialLinks()}</Route>
             <Route path={`/about`}>{about()}</Route>
-            {articles.map(article =><Route key={article.url} path={`/${article.url}`}><BlogPost body={article.body}/> </Route>)}
+            {articles.map(article =><Route key={article.url} path={`/${article.url}`}><BlogPost title={article.title} body={article.body}/> </Route>)}
           </Switch>
         </AnimatePresence>
         <div className="side-content">
@@ -114,15 +113,28 @@ function HomePage() {
   );
 }
 
+function blogHeader(article){
+  return(
+    <div className="article-container">
+      <div className="header-top">
+        <h2 className="header-title">{article.title}</h2>
+        <span className="header-date">{new Date(article.date).toLocaleDateString()}</span> 
+      </div> 
+      {article.author ? <p className="header-author">by {article.author}</p>: null}
+    </div>
+    )
+}
+
 function HomePageSite(articles){
     return(
         <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
         <div className="main-container">
           <h2 className="main-title"> Princess Connect Re:dive EN Tierlist/ Rank List</h2>
+          <p>Unoficcial Princess Connect Re:Dive Site</p>
           <h3 className="main-subtitle"> 
             Note: Last announcement broke all predictions, please read the events disclaimer.
           </h3>
-          <p>I don't know what to put here yet lol. All tabs should be working. tabs in the more section don't have content yet</p>
+          <h3>Lastest Posts:</h3>
           {articles.sort(function (a, b) {
                   const dateA=new Date(a.date)
                   const dateB = new Date(b.date)
@@ -134,7 +146,7 @@ function HomePageSite(articles){
                   }
                   return 0;
                 })
-          .map(article => <Link to={`/${article.url}`} className="homepage-article"><div className="article-container"><h2 className="main-subtitle">{article.title}</h2> {article.author ? <p style={{color:'gray'}}>{article.author}</p>: null} <p style={{fontSize:14}}>{new Date(article.date).toLocaleDateString()}</p> </div></Link>)}
+          .map(article => <Link key={article.title} to={`/${article.url}`} className="homepage-article">{blogHeader(article)}</Link>)}
         </div>
       </motion.div>
     )
@@ -182,7 +194,7 @@ function eventDisclaimer(){
           <h3 className="main-subtitle"> Since the last updates broke all predictions this timeline is not to be trusted. I'll update it if there's new data on the future or just change it to the japanese schedule so we can at least base on that.
           </h3>
             <p> All the predictions here are extracted from datamining and have a high chance of changing, use these dates at your own discretion</p>
-            <p>All the datamined data is extracted from here: <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNbWj9WgXCt3O7jSzlCs2rv0YwqBWXKYmcNHrIZOLWoEvLdjzd94OiksgQteXMrb9KfkVNFEzCGMC8/pubhtml#">https://docs.google.com/spreadsheets/d/e/2PACX-1vRNbWj9WgXCt3O7jSzlCs2rv0YwqBWXKYmcNHrIZOLWoEvLdjzd94OiksgQteXMrb9KfkVNFEzCGMC8/pubhtml#</a> and all credits goes to them. I'm just adding them to this site for ease of reading</p>
+            <p>All the datamined data is extracted from here: <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNbWj9WgXCt3O7jSzlCs2rv0YwqBWXKYmcNHrIZOLWoEvLdjzd94OiksgQteXMrb9KfkVNFEzCGMC8/pubhtml#">Link to docs</a> .All credits goes to them. I'm just adding them to this site for ease of reading</p>
         
         </div>
       </motion.div>
@@ -617,7 +629,7 @@ function guides(){
     <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
         <div className="main-container">
           <h2 className="main-title"> Guides</h2>
-          <p> Here we'll add a list of useful guides:</p>
+          <p><a href="https://docs.google.com/document/d/1Mj9ulFAvl69a5l53z-Li_WDp7__vd_DYFKxQC9KHqPc/edit"> Awesome beginner guide by u/Kaito_6 <i className="fas fa-external-link-alt"></i></a></p>
             
         </div>
       </motion.div>
@@ -629,22 +641,22 @@ function usefulLinks(){
         <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
         <div className="main-container">
           <h2 className="main-title"> Useful Links</h2>
-          <p> Links to other tools and useful sites will go here</p>
-        </div>
+          <h3 className="main-subtitle"> Official Links</h3>
+          <p><a href="https://www.crunchyroll.com/games/princessconnectredive/index.html" >* Official site<i className="fas fa-external-link-alt"></i> </a></p>
+          <p><a >* Twitter<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a >* Instagram<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a >* Facebook<i className="fas fa-external-link-alt"></i></a></p>
+          <h3 className="main-subtitle"> Unofficial links</h3>
+          {/*<p><a href="https://www.priconneglobal.info">*PriconneGlobal.info<i className="fas fa-external-link-alt"></i></a>: Very complete site with info and guides for the global server</p>
+          <p><a href="https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839">* Kadedeal Docs<i className="fas fa-external-link-alt"></i></a>: Very useful spreadsheet with a lot of info about the game, guides,tierlist, meta, etc.</p>
+          <p><a href="https://docs.google.com/spreadsheets/d/1ryURfErjATtSGhxvUnKC49JN0Z-FvHtv0yVmgrZeO2g/htmlview?pru=AAABdz3VjX0*AR30vxk-nfrZ92K5AT-xxg#">* Borkono Notes<i className="fas fa-external-link-alt"></i></a>: Another very useful spreadsheet with a lot of info about future banners and events,character reviews,recommendations,etc.</p>
+          <p><a href="https://shioris-library.com/?">* Shiori Library<i className="fas fa-external-link-alt"></i></a>: Database and farming planner tool</p>
+    */}
+          </div>
       </motion.div>
     )
 }
 
-function officialLinks(){
-    return(
-        <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
-        <div className="main-container">
-          <h2 className="main-title"> Official Links</h2>
-          <p> Official links will go here</p>
-        </div>
-      </motion.div>
-    )
-}
 
 function about(){
     return(
@@ -656,6 +668,5 @@ function about(){
       </motion.div>
     )
 }
-
 
 export default HomePage;

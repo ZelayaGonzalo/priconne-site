@@ -38,8 +38,7 @@ function Schedule(){
                 setShowClan(!showClan)
                 break
             default:
-                return
-                break
+                return 
         }
     }
     function buttonCloseFilter(event){

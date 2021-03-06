@@ -258,11 +258,27 @@ a {
 .homepage-article {
   background-color: white;
   margin: 5px 0;
-  width: 90%;
+  width: 95%;
   height: auto;
   padding: 5px 0;
   border-radius: 25px;
   border: 2px solid #ffdeab;
+  width: 100%;
+}
+.homepage-article .header-top {
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.homepage-article .header-top .header-date {
+  font-size: 15px;
+  width: auto;
+}
+.homepage-article .header-author {
+  font-size: 14px;
+  color: #3d3f4e;
 }
 
 /*# sourceMappingURL=homepage.css.map */

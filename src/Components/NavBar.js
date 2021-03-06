@@ -34,7 +34,6 @@ function NavBar(){
                             <li className="section"><div className="link-button"><Link to={`/game-updates`}>Game Updates</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`/guides`}>Guides</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`/useful-links`}>Useful Links</Link></div></li>
-                            <li className="section"><div className="link-button"><Link to={`/official-links`}>Official Links</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`/about`}>About</Link></div></li>
                         </ul>
                     </li>

@@ -91,8 +91,8 @@ const eventData= [
     name:"Normal Drop x2",
     banner:"https://i.ibb.co/Z29vN0w/normal-questx2.jpg",
     type:"bonus",
-    start:new Date("2021/3/27"),
-    end:new Date("2021/4/1"),
+    start:new Date("2021/3/7"),
+    end:new Date("2021/3/21"),
     link:""
     },
     {
@@ -204,8 +204,8 @@ const eventData= [
     name:"Ayane",
     banner:"https://i.ibb.co/5kw9dYk/Ayane.jpg",
     type:"focus",
-    start:new Date("2021/3/4"),
-    end:new Date("2021/3/15"),
+    start:new Date("2021/3/5"),
+    end:new Date("2021/3/23"),
     link:"https://princess-connect.fandom.com/wiki/Ayane_Hojo"
     },
     {
