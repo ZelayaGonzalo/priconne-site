@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/priconne-site/static/css/main.e87f9abe.chunk.css",
-    "main.js": "/priconne-site/static/js/main.cc4f65bd.chunk.js",
-    "main.js.map": "/priconne-site/static/js/main.cc4f65bd.chunk.js.map",
-    "runtime-main.js": "/priconne-site/static/js/runtime-main.0f3a868a.js",
-    "runtime-main.js.map": "/priconne-site/static/js/runtime-main.0f3a868a.js.map",
-    "static/css/2.9901cfd6.chunk.css": "/priconne-site/static/css/2.9901cfd6.chunk.css",
-    "static/js/2.0f3bb73c.chunk.js": "/priconne-site/static/js/2.0f3bb73c.chunk.js",
-    "static/js/2.0f3bb73c.chunk.js.map": "/priconne-site/static/js/2.0f3bb73c.chunk.js.map",
-    "index.html": "/priconne-site/index.html",
-    "static/css/2.9901cfd6.chunk.css.map": "/priconne-site/static/css/2.9901cfd6.chunk.css.map",
-    "static/css/main.e87f9abe.chunk.css.map": "/priconne-site/static/css/main.e87f9abe.chunk.css.map",
-    "static/js/2.0f3bb73c.chunk.js.LICENSE.txt": "/priconne-site/static/js/2.0f3bb73c.chunk.js.LICENSE.txt",
-    "static/media/homepage.css": "/priconne-site/static/media/romboo.7d74c59a.svg",
-    "static/media/style.css": "/priconne-site/static/media/stamp.acf66efc.png"
+    "main.css": "/static/css/main.eebf870e.chunk.css",
+    "main.js": "/static/js/main.f9f73861.chunk.js",
+    "main.js.map": "/static/js/main.f9f73861.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.18cad9e5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.18cad9e5.js.map",
+    "static/css/2.9901cfd6.chunk.css": "/static/css/2.9901cfd6.chunk.css",
+    "static/js/2.0f3bb73c.chunk.js": "/static/js/2.0f3bb73c.chunk.js",
+    "static/js/2.0f3bb73c.chunk.js.map": "/static/js/2.0f3bb73c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.9901cfd6.chunk.css.map": "/static/css/2.9901cfd6.chunk.css.map",
+    "static/css/main.eebf870e.chunk.css.map": "/static/css/main.eebf870e.chunk.css.map",
+    "static/js/2.0f3bb73c.chunk.js.LICENSE.txt": "/static/js/2.0f3bb73c.chunk.js.LICENSE.txt",
+    "static/media/homepage.css": "/static/media/romboo.7d74c59a.svg",
+    "static/media/style.css": "/static/media/stamp.acf66efc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0f3a868a.js",
+    "static/js/runtime-main.18cad9e5.js",
     "static/css/2.9901cfd6.chunk.css",
     "static/js/2.0f3bb73c.chunk.js",
-    "static/css/main.e87f9abe.chunk.css",
-    "static/js/main.cc4f65bd.chunk.js"
+    "static/css/main.eebf870e.chunk.css",
+    "static/js/main.f9f73861.chunk.js"
   ]
 }
