@@ -206,5 +206,4 @@ function showBannerMobile(data){
     )
 }
 
-//https://i.ibb.co/kDsW6dc/cityBG.jpg
 export default Schedule
