@@ -27,6 +27,10 @@ function HomePage() {
     return eventData.filter(data => (data.type ==='focus' && data.start.getTime() <= new Date().getTime() && data.end.getTime() >= new Date().getTime()))
     .map(data => <img key={data.name} src={data.banner} alt={data.name}></img>)
   }
+  function getCurrentEvents(){
+    return eventData.filter(data => (data.type != 'focus' && data.start.getTime() <= new Date().getTime() && data.end.getTime() >= new Date().getTime()))
+    .map(data => <img key={data.name} src={data.banner} alt={data.name}></img>)
+  }
 
   useEffect(() => {
     async function fetchData(){
@@ -69,7 +73,7 @@ function HomePage() {
             <Route path={`/guides`}>{guides()}</Route>
             <Route path={`/useful-links`}>{usefulLinks()}</Route>
             <Route path={`/about`}>{about()}</Route>
-            {articles.map(article =><Route key={article.url} path={`/${article.url}`}><BlogPost title={article.title} body={article.body}/> </Route>)}
+            {articles.map(article =><Route key={article.url} path={`/${article.url}`}><BlogPost date={new Date(article.date).toLocaleDateString()} author={article.author} url={article.url} title={article.title} body={article.body}/> </Route>)}
           </Switch>
         </AnimatePresence>
         <div className="side-content">
@@ -86,8 +90,7 @@ function HomePage() {
             </div>
             <div className="current-event-frame">
               <p className="current-event-title">Current Events</p>
-              <img src="https://i.ibb.co/JF3dQkN/hatsune.jpg" alt="banner" />
-              <img src="https://i.ibb.co/chnJYJS/groto-x2.jpg" alt="banner" />
+              {getCurrentEvents()}
             </div>
             <ul className="current-event-frame social">
               <li>
@@ -642,13 +645,14 @@ function usefulLinks(){
         <div className="main-container">
           <h2 className="main-title"> Useful Links</h2>
           <h3 className="main-subtitle"> Official Links</h3>
-          <p><a href="https://www.crunchyroll.com/games/princessconnectredive/index.html" >* Official site<i className="fas fa-external-link-alt"></i> </a></p>
-          <p><a >* Twitter<i className="fas fa-external-link-alt"></i></a></p>
-          <p><a >* Instagram<i className="fas fa-external-link-alt"></i></a></p>
-          <p><a >* Facebook<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a href="https://www.crunchyroll.com/games/princessconnectredive/index.html" target='_blank' rel="noreferrer noopener">* Official site<i className="fas fa-external-link-alt"></i> </a></p>
+          <p><a href="https://twitter.com/priconne_en/" target='_blank' rel="noreferrer noopener">* Twitter<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a target='_blank' rel="noreferrer noopener">* Instagram<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a target='_blank' rel="noreferrer noopener">* Facebook<i className="fas fa-external-link-alt"></i></a></p>
           <h3 className="main-subtitle"> Unofficial links</h3>
-          {/*<p><a href="https://www.priconneglobal.info">*PriconneGlobal.info<i className="fas fa-external-link-alt"></i></a>: Very complete site with info and guides for the global server</p>
-          <p><a href="https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839">* Kadedeal Docs<i className="fas fa-external-link-alt"></i></a>: Very useful spreadsheet with a lot of info about the game, guides,tierlist, meta, etc.</p>
+          <p><a href="https://www.priconneglobal.info" target='_blank' rel="noreferrer noopener">*PriconneGlobal.info<i className="fas fa-external-link-alt"></i></a>: Very complete site with info and guides for the global server</p>
+          <p><a href="https://pricalc.ooo/" target='_blank' rel="noreferrer noopener">*PriconneGlobal.info<i className="fas fa-external-link-alt"></i></a>: Global server analysis tool</p>
+          {/*<p><a href="https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839">* Kadedeal Docs<i className="fas fa-external-link-alt"></i></a>: Very useful spreadsheet with a lot of info about the game, guides,tierlist, meta, etc.</p>
           <p><a href="https://docs.google.com/spreadsheets/d/1ryURfErjATtSGhxvUnKC49JN0Z-FvHtv0yVmgrZeO2g/htmlview?pru=AAABdz3VjX0*AR30vxk-nfrZ92K5AT-xxg#">* Borkono Notes<i className="fas fa-external-link-alt"></i></a>: Another very useful spreadsheet with a lot of info about future banners and events,character reviews,recommendations,etc.</p>
           <p><a href="https://shioris-library.com/?">* Shiori Library<i className="fas fa-external-link-alt"></i></a>: Database and farming planner tool</p>
     */}

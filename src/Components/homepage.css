@@ -257,13 +257,15 @@ a {
 
 .homepage-article {
   background-color: white;
-  margin: 5px 0;
+  margin: 10px 0;
   width: 95%;
   height: auto;
   padding: 5px 0;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid #ffdeab;
-  width: 100%;
+  width: 95%;
+  -webkit-box-shadow: 0px 0px 15px 5px #4A4A4A;
+  box-shadow: 0px 0px 15px 5px #4A4A4A;
 }
 .homepage-article .header-top {
   padding: 0 10px;

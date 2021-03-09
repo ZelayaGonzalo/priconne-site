@@ -6,3 +6,32 @@
     max-width: 100%;
     height: auto;
 }
+iframe{
+    max-width: 80%;
+}
+.blog-mobile iframe{
+    max-width: 90vw;
+    height: 52vw;
+}
+.blog-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #3d3f4e;
+    font-weight: 800;
+    
+}
+.blog-top .blog-date{
+    display: flex;
+    justify-content: end;
+}
+#thread__wrapper{
+    background-color: aqua;
+}
+#disqus_thread{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.808);
+    border: 2px solid #ffdeab;
+    border-radius: 25px;
+    padding: 0 10px;
+}

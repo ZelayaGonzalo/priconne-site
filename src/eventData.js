@@ -1,5 +1,13 @@
 const eventData= [
     {
+    name:"Clan Battle (Beta)",
+    banner:"https://i.ibb.co/7nq3kXF/cb.jpg",
+    type:"clan",
+    start:new Date("2021/3/7"),
+    end:new Date("2021/3/12"),
+    link:""
+    },
+    {
     name:"Groto 2x",
     banner:"https://i.ibb.co/chnJYJS/groto-x2.jpg",
     type:"bonus",

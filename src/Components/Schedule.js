@@ -48,6 +48,7 @@ function Schedule(){
         if(showDrops && data.type === "bonus") return true
         if(showStory && data.type === "story") return true
         if(showBanners && data.type === "focus") return true
+        if(showClan && data.type === "clan") return true
         return false
     }
 
