@@ -17,7 +17,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 function HomePage() {
   const [showEvent, setShowEvent] = useState(true);
   const [articles,setArticles] = useState([])
-  let { path,url} = useRouteMatch();
+  let { path} = useRouteMatch();
   const location =useLocation()
   const apiURL="https://blogapinodejs.herokuapp.com/api/all"
 
@@ -29,7 +29,7 @@ function HomePage() {
     .map(data => <img key={data.name} src={data.banner} alt={data.name}></img>)
   }
   function getCurrentEvents(){
-    return eventData.filter(data => (data.type != 'focus' && data.start.getTime() <= new Date().getTime() && data.end.getTime() >= new Date().getTime()))
+    return eventData.filter(data => (data.type !== 'focus' && data.start.getTime() <= new Date().getTime() && data.end.getTime() >= new Date().getTime()))
     .map(data => <img key={data.name} src={data.banner} alt={data.name}></img>)
   }
 
@@ -95,11 +95,6 @@ function HomePage() {
             </div>
             <ul className="current-event-frame social">
               <li>
-                <a href="https://discord.gg/priconne">
-                  <i className="fab fa-discord"></i>
-                </a>
-              </li>
-              <li>
                 <a href="https://www.youtube.com/c/TimaeuSS">
                   <i className="fab fa-youtube"></i>
                 </a>
@@ -136,7 +131,7 @@ function HomePageSite(articles){
           <h2 className="main-title"> Princess Connect Re:dive EN Tierlist/ Rank List</h2>
           <p>Unoficcial Princess Connect Re:Dive Site</p>
           <h3 className="main-subtitle"> 
-            Note: Last announcement broke all predictions, please read the events disclaimer.
+            Note: Last announcement broke all event predictions, please read the events disclaimer.
           </h3>
           <h3>Lastest Posts:</h3>
           {articles.sort(function (a, b) {
@@ -167,7 +162,7 @@ function tierDisclaimer() {
           <img
             className="main-content-img"
             src="https://i.ibb.co/KLXVrBc/rank-1.jpg"
-            alt="rank 1 image"
+            alt="rank 1 on cb"
           />
           <p>
             {' '}
@@ -198,8 +193,9 @@ function eventDisclaimer(){
           <h3 className="main-subtitle"> Since the last updates broke all predictions this timeline is not to be trusted. I'll update it if there's new data on the future or just change it to the japanese schedule so we can at least base on that.
           </h3>
             <p> All the predictions here are extracted from datamining and have a high chance of changing, use these dates at your own discretion</p>
-            <p>All the datamined data is extracted from here: <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNbWj9WgXCt3O7jSzlCs2rv0YwqBWXKYmcNHrIZOLWoEvLdjzd94OiksgQteXMrb9KfkVNFEzCGMC8/pubhtml#">Link to docs</a> .All credits goes to them. I'm just adding them to this site for ease of reading</p>
-        
+            <p>Also, drop events are a mess so I'll remove them for now</p>
+          <p>All the datamined data is extracted from here: <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRNbWj9WgXCt3O7jSzlCs2rv0YwqBWXKYmcNHrIZOLWoEvLdjzd94OiksgQteXMrb9KfkVNFEzCGMC8/pubhtml#">Link to docs</a> .All credits goes to them. I'm just adding them to this site for ease of reading</p>
+
         </div>
       </motion.div>
     )
@@ -291,8 +287,8 @@ function showBannerUpcoming(data) {
   return (
     <div key={data.name} className="margin-top">
       <h3>{data.name}</h3>
-      <p>Predicted start: {data.start.toLocaleDateString()}</p>
-      <p>Predicted end: {data.end.toLocaleDateString()}</p>
+      {/*<p>Predicted start: {data.start.toLocaleDateString()}</p>
+      <p>Predicted end: {data.end.toLocaleDateString()}</p>*/}
       <a href={data.link} target="_blank" rel="noopener noreferrer">
         <img alt={data.name} src={data.banner}></img>
       </a>
@@ -633,8 +629,8 @@ function guides(){
     <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
         <div className="main-container">
           <h2 className="main-title"> Guides</h2>
-          <p><a href="https://docs.google.com/document/d/1Mj9ulFAvl69a5l53z-Li_WDp7__vd_DYFKxQC9KHqPc/edit"> Awesome beginner guide by u/Kaito_6 <i className="fas fa-external-link-alt"></i></a></p>
-            
+          <p><a href="https://docs.google.com/document/d/1Mj9ulFAvl69a5l53z-Li_WDp7__vd_DYFKxQC9KHqPc/edit" target='_blank' rel="noreferrer noopener"> Awesome beginner guide by u/Kaito_6 <i className="fas fa-external-link-alt"></i></a></p>
+          <p><a href="https://www.reddit.com/r/Priconne/comments/kdkn3f/rerolling_without_redownloading_the_big_chunk_of/?sort=new" target='_blank' rel="noreferrer noopener">Reroll guide by u/rozeluxe08 <i className="fas fa-external-link-alt"></i></a></p>
         </div>
       </motion.div>
       )
@@ -648,15 +644,14 @@ function usefulLinks(){
           <h3 className="main-subtitle"> Official Links</h3>
           <p><a href="https://www.crunchyroll.com/games/princessconnectredive/index.html" target='_blank' rel="noreferrer noopener">* Official site<i className="fas fa-external-link-alt"></i> </a></p>
           <p><a href="https://twitter.com/priconne_en/" target='_blank' rel="noreferrer noopener">* Twitter<i className="fas fa-external-link-alt"></i></a></p>
-          <p><a target='_blank' rel="noreferrer noopener">* Instagram<i className="fas fa-external-link-alt"></i></a></p>
-          <p><a target='_blank' rel="noreferrer noopener">* Facebook<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a href="https://www.instagram.com/priconne_en/" target='_blank' rel="noreferrer noopener">* Instagram<i className="fas fa-external-link-alt"></i></a></p>
+          <p><a href="https://www.facebook.com/priconne.en/" target='_blank' rel="noreferrer noopener">* Facebook<i className="fas fa-external-link-alt"></i></a></p>
           <h3 className="main-subtitle"> Unofficial links</h3>
           <p><a href="https://www.priconneglobal.info" target='_blank' rel="noreferrer noopener">*PriconneGlobal.info<i className="fas fa-external-link-alt"></i></a>: Very complete site with info and guides for the global server</p>
-          <p><a href="https://pricalc.ooo/" target='_blank' rel="noreferrer noopener">*PriconneGlobal.info<i className="fas fa-external-link-alt"></i></a>: Global server analysis tool</p>
-          {/*<p><a href="https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839">* Kadedeal Docs<i className="fas fa-external-link-alt"></i></a>: Very useful spreadsheet with a lot of info about the game, guides,tierlist, meta, etc.</p>
-          <p><a href="https://docs.google.com/spreadsheets/d/1ryURfErjATtSGhxvUnKC49JN0Z-FvHtv0yVmgrZeO2g/htmlview?pru=AAABdz3VjX0*AR30vxk-nfrZ92K5AT-xxg#">* Borkono Notes<i className="fas fa-external-link-alt"></i></a>: Another very useful spreadsheet with a lot of info about future banners and events,character reviews,recommendations,etc.</p>
+          <p><a href="https://pricalc.ooo/" target='_blank' rel="noreferrer noopener">*Pricalc.ooo<i className="fas fa-external-link-alt"></i></a>: Global server analysis tool</p>
           <p><a href="https://shioris-library.com/?">* Shiori Library<i className="fas fa-external-link-alt"></i></a>: Database and farming planner tool</p>
-    */}
+          <p><a href="https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839">* Kadedeal Docs<i className="fas fa-external-link-alt"></i></a>: Very useful spreadsheet with a lot of info about the game, guides,tierlist, meta, etc.</p>
+          <p><a href="https://docs.google.com/spreadsheets/d/1ryURfErjATtSGhxvUnKC49JN0Z-FvHtv0yVmgrZeO2g/htmlview?pru=AAABdz3VjX0*AR30vxk-nfrZ92K5AT-xxg#">* Borkono Notes<i className="fas fa-external-link-alt"></i></a>: Another very useful spreadsheet with a lot of info about future banners and events,character reviews,recommendations,etc.</p>
           </div>
       </motion.div>
     )

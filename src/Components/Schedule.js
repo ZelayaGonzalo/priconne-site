@@ -191,7 +191,7 @@ function showBanner(data){
     return(
         <a href={data.link} target="_blank" rel="noopener noreferrer" className="schedule-banner" key={data.name}>
             <p className="name-button">{data.name}</p>
-            <p className="date-button">{`${data.start.getMonth()+1}/${data.start.getDate()} ~ ${data.end.getMonth()+1}/${data.end.getDate()}`}</p>
+            {/*<p className="date-button">{`${data.start.getMonth()+1}/${data.start.getDate()} ~ ${data.end.getMonth()+1}/${data.end.getDate()}`}</p>*/}
             <img alt={data.name} src={data.banner}></img>
         </a>
     )
@@ -200,7 +200,7 @@ function showBannerMobile(data){
     return(
         <a href={data.link} target="_blank" rel="noopener noreferrer" key={data.name}>
             <p className="name-button">{data.name}</p>
-            <p className="date-button">{`${data.start.getMonth()+1}/${data.start.getDate()} ~ ${data.end.getMonth()+1}/${data.end.getDate()}`}</p>
+            {/*<p className="date-button">{`${data.start.getMonth()+1}/${data.start.getDate()} ~ ${data.end.getMonth()+1}/${data.end.getDate()}`}</p>*/}
             <img alt={data.name} src={data.banner}></img>
         </a>
     )

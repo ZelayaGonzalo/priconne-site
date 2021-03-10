@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
 import './blogpost.css'
 import { DiscussionEmbed } from 'disqus-react';
-import { useLocation } from 'react-router-dom';
 function BlogPost(props){
     return(
         <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >

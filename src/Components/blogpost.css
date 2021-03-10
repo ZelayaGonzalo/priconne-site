@@ -23,7 +23,7 @@ iframe{
 }
 .blog-top .blog-date{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 #thread__wrapper{
     background-color: aqua;
