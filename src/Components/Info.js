@@ -12,9 +12,4 @@ function Info(){
       </div>
     )
 }
-/*
-https://i.ibb.co/ZLBP17Y/filters-mobile.jpg
-https://i.ibb.co/c8VV7Cn/hidden-tab.jpg
-https://i.ibb.co/9b4gYry/search-mobile.jpg
-*/
 export default Info

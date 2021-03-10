@@ -1,4 +1,5 @@
 import './homepage.css';
+import './style.css'
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import BlogPost from './BlogPost'

@@ -12,7 +12,7 @@ function NavBar(){
                     <li className="link-to link-to-desktop">
                         <div className="link-button"><a>Events</a></div>
                         <ul className="section-container">
-                            <li className="section"><div className="link-button"><Link to="/timeline" target="_blank">Timeline  <i className="fas fa-external-link-alt"></i></Link></div></li>
+                           {/* <li className="section"><div className="link-button"><Link to="/timeline" target="_blank">Timeline  <i className="fas fa-external-link-alt"></i></Link></div></li>*/}
                             <li className="section"><div className="link-button"><Link to={`/events-disclaimer`}>Disclaimer</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`/events-info`}>Info</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`/past-events`}>Past</Link></div></li>
@@ -22,7 +22,7 @@ function NavBar(){
                     <li className="link-to link-to-desktop">
                         <div className="link-button"><a>Tierlist</a></div>
                         <ul className="section-container">
-                            <li className="section"><div className="link-button"><Link to="/tierlist" target="_blank">Tierlist  <i className="fas fa-external-link-alt"></i></Link></div></li>
+                            <li className="section"><div className="link-button"><a href="https://zelayagonzalo.github.io/priconne-tierlist" target="_blank">Tierlist<i className="fas fa-external-link-alt"></i></a></div></li>
                             <li className="section"><div className="link-button"><Link to={`${url}tierlist-disclaimer`}>Disclaimer</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`${url}tierlist-tutorial`}>Tutorial</Link></div></li>
                             <li className="section"><div className="link-button"><Link to={`${url}tierlist-changelog`}>Changelog</Link></div></li>
