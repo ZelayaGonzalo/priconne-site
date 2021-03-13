@@ -157,7 +157,7 @@ function tierDisclaimer() {
         <div className="main-container">
           <h2 className="main-title">
             {' '}
-            Disclaimer{' '}
+            Disclaimer by TimaeuSS{' '}
           </h2>
           <img
             className="main-content-img"
@@ -172,14 +172,10 @@ function tierDisclaimer() {
             battles <br /> !!!READ AT YOUR OWN RISK!!!
           </p>
           <p>
-            {' '}
-            ALSO NOTE!!! <br />
-            Some of these units are kept at R7 despite stat gain over R8 due to
-            shortage of R8 gear needed for CB for March AKA mages, healers
-            asking to stay at R7 because you rather focus stamina for R8 damage
-            dealers first and healers are used for mechanics (maho blind etc so
-            her healing output isn't priority){' '}
+            <a href="	https://www.youtube.com/watch?v=T-nYrHY29Vw" target="_blank" rel="noopener noreferrer">Video explanation of the choices</a>
           </p>
+          <p>Source: Data Extractor u/AnduCrandu</p>
+          <p><a href="https://pricalc.ooo/analysis/rank-comparison" target="_blank" rel="noopener noreferrer">Please use the stat difference to make your own PvP decisions</a></p>
         </div>
       </motion.div>
   );
@@ -606,7 +602,10 @@ function tierlistChangelog() {
     <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
       <div className="main-container">
         <h2 className="main-title"> Changelog </h2>
-        Changes to the tierlist will go here
+        <h3 className="main-subtitle">Mar 13,2021</h3>
+        <p>*Starting R8-5 Map 10 recommendations</p>
+        <p>*Added Ayane</p>
+        <p>*Removed Jun from Hard drops. I'll add her when she's avaliable</p>
       </div>
     </motion.div>
   );
