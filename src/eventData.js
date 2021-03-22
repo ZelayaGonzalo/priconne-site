@@ -15,6 +15,8 @@ const eventData= [
     end:new Date("2021/3/7"),
     link:""
     },
+
+    //Dungeon Mana
     {
     name:"Dungeon Mana 2x",
     banner:"https://i.ibb.co/RgkMhDs/dungeon-manax2.jpg",
@@ -23,6 +25,16 @@ const eventData= [
     end:new Date("2021/2/25"),
     link:""
     },
+    {
+    name:"Dungeon Mana 2x",
+    banner:"https://i.ibb.co/RgkMhDs/dungeon-manax2.jpg",
+    type:"bonus",
+    start:new Date("2021/3/19"),
+    end:new Date("2021/4/2"),
+    link:""
+    },
+
+    //Normal Drop
     {
     name:"Normal Drop x2",
     banner:"https://i.ibb.co/Z29vN0w/normal-questx2.jpg",
@@ -39,6 +51,18 @@ const eventData= [
     end:new Date("2021/3/21"),
     link:""
     },
+    
+    //Hard Drop 
+    {
+    name:"Hard Drop x2",
+    banner:"https://i.ibb.co/nQk8Jrb/hardquestx2.jpg",
+    type:"bonus",
+    start:new Date("2021/3/15"),
+    end:new Date("2021/3/18"),
+    link:""
+    },
+
+    //Special
     {
     name:"Login Bonus",
     banner:"https://i.ibb.co/rp3Qj2m/login-bonus.jpg",
@@ -79,6 +103,9 @@ const eventData= [
     end:new Date("2021/2/23"),
     link:""
     },
+
+
+    //Dungeon Mana
     {
     name:"Dungeon Mana 2x",
     banner:"https://i.ibb.co/RgkMhDs/dungeon-manax2.jpg",
@@ -179,7 +206,7 @@ const eventData= [
     },
     {
     name:"Little Lyrical Adventures",
-    banner:"https://i.ibb.co/VSxyxGP/Little-Lyrical-Adventures.jpg",
+    banner:"https://i.ibb.co/NVRy0z3/Little-Lyrycal.jpg",
     type:"story",
     start:new Date("2021/3/22"),
     end:new Date("2021/4/11"),
@@ -214,15 +241,15 @@ const eventData= [
     banner:"https://i.ibb.co/5kw9dYk/Ayane.jpg",
     type:"focus",
     start:new Date("2021/3/5"),
-    end:new Date("2021/3/23"),
+    end:new Date("2021/3/22"),
     link:"https://princess-connect.fandom.com/wiki/Ayane_Hojo"
     },
     {
     name:"Kyouka",
-    banner:"https://i.ibb.co/BPd9mh8/Full-Art-Kyouka.jpg",
+    banner:"https://i.ibb.co/hgc1fFK/Kyouka-Baneer.jpg",
     type:"focus",
     start:new Date("2021/3/22"),
-    end:new Date("2021/3/10"),
+    end:new Date("2021/4/10"),
     link:"https://princess-connect.fandom.com/wiki/Kyouka_Hikawa"
     },
     {

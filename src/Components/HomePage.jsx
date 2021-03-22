@@ -3,6 +3,7 @@ import './style.css'
 import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import BlogPost from './BlogPost'
+import Clock from './Clock'
 import { isMobile, MobileView, BrowserView } from 'react-device-detect';
 import {
   Switch,
@@ -85,6 +86,10 @@ function HomePage() {
                 : 'side-container'
             }
           >
+            <div className="current-event-frame">
+              <p className="current-event-title">Game Time</p>
+              <Clock/>
+            </div>
             <div className="current-event-frame">
               <p className="current-event-title">Current Banner</p>
               {getCurrentBanners()}
@@ -616,7 +621,8 @@ function gameUpdates(){
         <motion.div className="main-content" initial={{y:"-100vh"}} animate={{y:0}} exit={{x:"-100vw"}} transition={{duration:0.3}} >
         <div className="main-container">
           <h2 className="main-title"> Game Updates</h2>
-          <p> Lastes updates about the game will go here</p>
+          <h3 className="main-subtitle"> 3/15/2021</h3>
+          <img className="main-content-img" src="https://i.ibb.co/GC806mK/Update.jpg" alt="Features of this update."></img>
         </div>
       </motion.div>
     )
