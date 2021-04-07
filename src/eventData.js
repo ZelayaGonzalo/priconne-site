@@ -15,7 +15,14 @@ const eventData= [
     end:new Date("2021/3/7"),
     link:""
     },
-
+    {
+    name:"Groto 2x",
+    banner:"https://i.ibb.co/chnJYJS/groto-x2.jpg",
+    type:"bonus",
+    start:new Date("2021/4/2"),
+    end:new Date("2021/4/12"),
+    link:""
+    },
     //Dungeon Mana
     {
     name:"Dungeon Mana 2x",
@@ -51,6 +58,14 @@ const eventData= [
     end:new Date("2021/3/21"),
     link:""
     },
+    {
+    name:"Normal Drop x2",
+    banner:"https://i.ibb.co/Z29vN0w/normal-questx2.jpg",
+    type:"bonus",
+    start:new Date("2021/4/12"),
+    end:new Date("2021/4/20"),
+    link:""
+    },
     
     //Hard Drop 
     {
@@ -71,14 +86,7 @@ const eventData= [
     end:new Date("2021/3/14"),
     link:""
     },
-    /*{
-    name:"Groto 2x",
-    banner:"https://i.ibb.co/chnJYJS/groto-x2.jpg",
-    type:"bonus",
-    start:new Date("2021/3/18"),
-    end:new Date("2021/3/27"),
-    link:""
-    },
+    /*
     {
     name:"Groto 2x",
     banner:"https://i.ibb.co/chnJYJS/groto-x2.jpg",
@@ -150,14 +158,6 @@ const eventData= [
     name:"Normal Drop x2",
     banner:"https://i.ibb.co/Z29vN0w/normal-questx2.jpg",
     type:"bonus",
-    start:new Date("2021/5/16"),
-    end:new Date("2021/5/19"),
-    link:""
-    },
-    {
-    name:"Normal Drop x2",
-    banner:"https://i.ibb.co/Z29vN0w/normal-questx2.jpg",
-    type:"bonus",
     start:new Date("2021/6/9"),
     end:new Date("2021/6/13"),
     link:""
@@ -216,24 +216,24 @@ const eventData= [
     name:"Vampire Hunter with Ilya",
     banner:"https://i.ibb.co/tYb96vS/Vampire-Hunterwith-Ilya-Event.jpg",
     type:"story",
-    start:new Date("2021/4/4"),
-    end:new Date("2021/4/21"),
+    start:new Date("2021/6/4"),
+    end:new Date("2021/6/21"),
     link:"https://princess-connect.fandom.com/wiki/Vampire_Hunter_with_Ilya"
     },
     {
     name:"Dangerous Vacation",
     banner:"https://i.ibb.co/1fW0VBL/Dangerous-Vacation-Event.jpg",
     type:"story",
-    start:new Date("2021/4/29"),
-    end:new Date("2021/5/16"),
+    start:new Date("2021/7/29"),
+    end:new Date("2021/8/16"),
     link:"https://princess-connect.fandom.com/wiki/Dangerous_Vacation"
     },
     {
     name:" Deserted Island 0 Rupee Life ",
     banner:"https://i.ibb.co/3W7vdtD/Deserted-Island-Event.jpg",
     type:"story",
-    start:new Date("2021/5/23"),
-    end:new Date("2021/6/8"),
+    start:new Date("2021/8/23"),
+    end:new Date("2021/9/8"),
     link:"https://princess-connect.fandom.com/wiki/Deserted_Island_0_Rupee_Life"
     },
     {
@@ -256,16 +256,16 @@ const eventData= [
     name:"Misato",
     banner:"https://i.ibb.co/0MD9cfY/Full-Art-Misato.jpg",
     type:"focus",
-    start:new Date("2021/4/1"),
-    end:new Date("2021/4/20"),
+    start:new Date("2021/4/11"),
+    end:new Date("2021/4/28"),
     link:"https://princess-connect.fandom.com/wiki/Misato_Aikawa"
     },
     {
     name:"Illya",
     banner:"https://i.ibb.co/Wcp88HD/Full-Art-Ilya.jpg",
     type:"focus",
-    start:new Date("2021/4/4"),
-    end:new Date("2021/4/18"),
+    start:new Date("2021/7/4"),
+    end:new Date("2021/8/18"),
     link:"https://princess-connect.fandom.com/wiki/Ilya_Ornstein"
     },
     {
@@ -280,16 +280,16 @@ const eventData= [
     name:"Summer Pecorine",
     banner:"https://i.ibb.co/SwXtN2Q/Full-Art-Summer-Pecorine.jpg",
     type:"focus",
-    start:new Date("2021/4/29"),
-    end:new Date("2021/5/13"),
+    start:new Date("2021/6/29"),
+    end:new Date("2021/7/13"),
     link:"https://princess-connect.fandom.com/wiki/Pecorine/Summer"
     },
     {
     name:"Summer Suzume",
     banner:"https://i.ibb.co/xfVZ2Fw/Full-Art-Summer-Suzume.jpg",
     type:"focus",
-    start:new Date("2021/5/13"),
-    end:new Date("2021/5/23"),
+    start:new Date("2021/6/13"),
+    end:new Date("2021/7/23"),
     link:"https://princess-connect.fandom.com/wiki/Suzume/Summer"
     },
     {
